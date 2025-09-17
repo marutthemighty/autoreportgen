@@ -1,0 +1,95 @@
+What you have here is an AI-enabled automatic report generator for MSMEs/SMBs (and if need be in the future, medium-large enterprises). This is a tool where users create their own reports using the available AI templates, or on their own via a canvas.
+
+Note: I am using PostgreSQL locally and Supabase online for the database, not SQLite.
+
+There are several issues with this code:
+
+1. The UI/UX is not exactly appealing. It looks really messy. On top of light/dark/system modes not working at all, the interface itself looks terrible. Everything is needlessly transparent, making it difficult to read. Plus when a popup box appears on the screen, everything, including the popup box, goes dark, making it immensely difficult to read, let alone act. The UI/UX is an absolute disaster.
+
+2. The "Report Builder" page does not work properly. Clicking on components and getting them on the canvas is one thing, but if you look closer, beyond getting components on the canvas of the report, it falls short on several counts:
+i. There is no means to move the component from one place to another within the report canvas, once it is placed on the canvas.
+ii. There is no means to change the size of individual components placed on the report canvas.
+iii. There is no means to rename, edit, update or delete/remove individual components placed on the report canvas.
+iv. There is no means to add new pages, remove existing pages or do anything else on the report canvas that functioning drag-and-drop report creators elsewhere normally execute without error.
+v. The report canvas needs to be longer in length. Reports are not half-pages, but full pages. This needs to be accounted for.
+
+The components are as follows:
+i. Basic: Header, Text Body, List, Table, Image, Metric, Separator.
+ii. Chart: Histogram, Pie Chart, Bubble Chart, Surface Chart, Gantt Chart, Area Chart, Box Plot, Scatter Plot, Bar Chart, Line Chart, Lollipop Chart, Heat Map, Pareto Chart, Radar Chart.
+iii. Graph: Bullet Graph, Dot Plot, Dumbbell Plot, Pictogram, Line Graph, Mosaic Plot, Box & Whisker Plot.
+
+These components need to execute perfectly, exactly as their names indicate. They need to meet user demands and needs as exactly.
+
+3. Inside the "Report Builder" page, there is a block titled "Report Components" with five unusable "components": Bar Chart, Line Chart, Pie Chart, Data Table, Text Block. This entire block is unnecessary, since all the components and the canvas are already present below them.
+
+Plus the "AI Report Generator" block has two sections: "Upload Data", which takes in inputs from the user, and "Configure Report", which asks users what they need. But "Select Data Source" under "Configure Report" only shows one option: "No Specific Source". This makes it useless. Users need more options, and if they are going to upload a dataset - or generate one - they need options. The "AI Report Generator" block is a rather poor attempt at taking in user input and generating data.
+
+What the "AI Report Generator" block needs to do is:
+1. Take in user inputs (as CSV, TSV, JSON, XLSX or any other data source, with a maximum size of 100 MB).
+-or-
+Generate user inputs as required. But realistic, plausible, actual datasets need to be generated, with the following:
+i. Time ranges required by the user (ask the user for dates, and give them choices in the DD/MM/YYYY, MM/DD/YYYY and YYYY/MM/DD formats).
+ii. The nature of the data to be used and the industry it covers, along with the niche (niche can be optional, but it would help sharpen the process of data creation).
+And use the above information to generate/create a dataset based on industry averages (growth rate, sales volumes, time periods of waxing and waning demand, etc., and other important data) and realities.
+2. Use the uploaded or generated data from the user and create a professional report.
+
+This way, the AI needs to create reports that users can use with ease. Do the right thing and get this done.
+
+4. There are some template previews in the "AI Templates" page, but the only message I get when I press "Preview" is "Template Preview feature coming soon". Also, when I press "Use Template", I get "Using "XYZ" template. Redirecting to AI Generator...". Beyond the message, nothing happens. Nothing. It just...disappears. This needs to be addressed. The 8 choices in "AI Templates" are good, but they need to be made functional.
+
+5. In the "Data Sources" page, the following options are available:
+Tabular data: Shopify, Google Analytics, Amazon Seller Central, WooCommerce, Facebook Ads, Instagram, BigCommerce, Etsy, Square, Wix Commerce, Adobe Commerce, QuickBooks, Tableau, Power BI.
+Event-based data: Mixpanel, Amplitude, Looker, Segment, Hotjar, Adobe Analytics, Google Analytics 4.
+
+All of them need to connect to the respective third-party sources via OAuth 2.0, if they are not already connecting that way. Check and verify this, and if need be, fix it.
+
+6. In the "Dashboard" page, there are 4 boxes on the top of the page:
+
+Box 1:
+
+Reports Generated
+
+0
+
++12%
+from last month
+
+Box 2:
+
+Data Sources
+
+0
+
++2
+new connections
+
+Box 3:
+
+AI Requests
+
+0
+
+of 10,000 monthly
+
+Box 4:
+
+Export Downloads
+
+0
+
++24%
+from last week
+
+As you can see, they all look irrational and terrible. Like, except maybe AI Requests, who else asks these extra data fillings like "+24% from last week", "+2 new connections", "+12% from last month", etc., instead of stating facts as they are? These 4 boxes themselves look shoddy, and such statements where unnecessary are the surest way to make users flee. Fix this issue, taking cues from professional SaaS and large service providers and their UI/UX and also backend/database functionalities.
+
+The "Add New Data Sources" block in the "Dashboard" page looks unnecessary. We are already uploading (or generating) data in "Report Builder" and "Data Sources", so why do we even need the "Add New Data Sources" block in the "Dashboard" page?
+
+7. There is a need for advanced OCR features, since users should also have the option to upload a report, which is in the form of an image or an uneditable image-like PDF report, and get a report which they can edit/update, rename or operate on. This is huge, and it needs to be addressed and fulfilled.
+
+8. The "Settings" page may need some tinkering and adjusting. There is a section asking for an API Key, but what API Key is that, and for what purpose is it used? This confounds users and needs to be addressed.
+
+9. Last but not the least: There must be no dummy data without any activity, it just undermines the SaaS and makes it look downright terrible. Unless and until the user uploads or generates data, there must be no dummy data or statistics.
+
+Do the right thing and fix all the above issues. Make sure you create an AI-enabled automatic report generator that actually delivers for users.
+
+Let's go!
